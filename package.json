@@ -7,11 +7,6 @@
     "start": "next start",
     "type-check": "tsc"
   },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
-  },
   "dependencies": {
     "next": "latest",
     "react": "^16.12.0",
