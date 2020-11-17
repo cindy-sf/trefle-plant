@@ -1,0 +1,33 @@
+@import '../../../global/scss/variables';
+
+.inputWrapper {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.input {
+  height: 4rem; 
+  width: 85%;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 8px 3px 40px 0 rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  padding-left: 2rem;
+  font-family: 'lato';
+  font-style: italic;
+}
+
+.searchBtn {
+  color: $color-white;
+  position: absolute;
+  right: calc(17%);
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: $color-green;
+  border-radius: 50%;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}

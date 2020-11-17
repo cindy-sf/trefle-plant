@@ -1,0 +1,49 @@
+@import '../../../global/scss/variables';
+
+.layout {
+  padding: 0.8rem 1.5rem;
+
+  @media(min-width: $small-screen) {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.nav {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-family: 'Playfair Display';
+  margin-top: 1rem;
+
+  @media(min-width: $small-screen) {
+    grid-template-columns: repeat(2, 1fr);
+
+    & > span {
+      display: none;
+    }
+  }
+}
+
+.brandTitle {
+  @media(min-width: $small-screen) {
+    text-align: left;
+  }
+}
+
+.dotMenu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  & > :first-child {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

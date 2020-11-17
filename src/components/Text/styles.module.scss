@@ -1,0 +1,93 @@
+@import '../../../global/scss/variables';
+
+.text {
+  font-family: 'Lato', sans-serif;
+
+  &.italic {
+    font-style: italic;
+  }
+ 
+  &.black {
+    color: $color-black;
+  }
+
+  &.white {
+    color: $color-white;
+  }
+
+  &.green {
+    color: $color-green;
+  }
+
+  &.titleL {
+    font-size: 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+
+    @media(min-width: $small-screen) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &.titleM {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+
+    @media(min-width: $small-screen) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &.titleS {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+
+    @media(min-width: $small-screen) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &.large {
+    font-size: 1.5rem;
+
+    @media(min-width: $small-screen) {
+      font-size: 2rem;
+    }
+  }
+  &.largeImportant {
+    @extend .large;
+    font-weight: bold;
+  }
+
+  &.medium {
+    font-size: 1.2rem;
+  }
+
+  &.mediumImportant {
+    @extend .medium;
+    font-weight: bold;
+  }
+
+  &.small {
+    font-size: 1rem;
+
+    @media(min-width: $small-screen) {
+      font-size: 1.2rem;
+    }
+  }
+  &.smallImportant {
+    @extend .small;
+    font-weight: bold;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.medium {
+    
+  }
+}
