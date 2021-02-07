@@ -1,0 +1,40 @@
+@import '../../../global/scss/variables';
+
+.inputSearch {
+  margin-bottom: 3rem;
+  position: sticky;
+  top: 1rem;
+  z-index: 1;
+
+  @media (min-width: $small-screen) {
+    max-width: 45rem;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+}
+
+.plantCardWrapper {
+  max-width: 45rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0.8rem;
+  overflow-x: hidden;
+
+  @media (min-width: $tiny-screen) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.onboardingIllu {
+  width: 35rem;
+
+  img {
+    width: 100%
+  }
+}
+
+.onboardingWrapper {
+  display: flex;
+  justify-content: center;
+}

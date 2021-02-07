@@ -9,6 +9,14 @@ interface Props {
 }
 
 export const Input:React.FC<Props> = ({ value, onSubmit, onChange }) => {
+  const handleKeyPress = (event: React.KeyboardEvent) =>{
+    if (value && event.key == 'Enter' ) onSubmit()
+  }
+
+  const handleSubmit = () => {
+    if (value) onSubmit()
+  }
+
   return (
     <div className={styles.inputWrapper}>
       <input
@@ -17,8 +25,9 @@ export const Input:React.FC<Props> = ({ value, onSubmit, onChange }) => {
         className={styles.input}
         value={value}
         onChange={onChange}
+        onKeyPress={handleKeyPress}
       />
-      <button className={styles.searchBtn} onClick={onSubmit}>&#8594;</button>
+      <button className={styles.searchBtn} onClick={handleSubmit}>&#8594;</button>
     </div>
   )
 }

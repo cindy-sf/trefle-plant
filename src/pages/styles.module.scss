@@ -30,10 +30,23 @@
     & > :first-child {
       order: 1;
     }
+    
+    & > :nth-child(2) {
+      @media (min-width: $small-screen) {
+        margin-right: 2rem;
+      }
+
+      @media (min-width: $custom-screen) {
+        margin-right: 6rem;
+      }
+    }
+
   }
 }
 
 .content {
+  margin-bottom: 2rem;
+
   @media (min-width: $small-screen) {
     display: flex;
     flex-direction: column;

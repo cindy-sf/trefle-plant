@@ -2,12 +2,8 @@ const { createServer } = require('https')
 const { parse } = require('url')
 const next = require('next')
 const fs = require('fs')
-const cors = require('cors')
 const express = require('express')
-const server = express()
-
-server.use(cors())
-server.options('*', cors())
+const cors = require('./middleware')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -19,6 +15,9 @@ const httpsOptions = {
 }
 
 app.prepare().then(() => {
+  const expressApp = express()
+  expressApp.use(cors)
+  
   createServer(httpsOptions, (req, res) => {
     const parsedUrl = parse(req.url, true)
     handle(req, res, parsedUrl)

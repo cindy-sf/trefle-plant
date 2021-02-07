@@ -29,6 +29,8 @@
 }
 
 .brandTitle {
+  cursor: pointer;
+
   @media(min-width: $small-screen) {
     text-align: left;
   }

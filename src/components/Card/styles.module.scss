@@ -1,0 +1,29 @@
+@import '../../../global/scss/variables';
+
+.plantCard {
+  cursor: pointer;
+}
+
+.plantImage {
+  width: 100%;
+  height: 21rem;
+  transition: opacity .3s;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+
+  @media (min-width: $small-screen) {
+    grid-template-columns: repeat(2, 1fr);
+    height: 31rem;
+  }
+
+  &:hover {
+    opacity: .9;
+  }
+  
+  img {
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
