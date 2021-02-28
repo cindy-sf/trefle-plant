@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 interface Props {
   src: string
@@ -6,20 +6,11 @@ interface Props {
 }
 
 export const Image:React.FC<Props> = ({ src, alt }) => {
-  let imgUrl = src
+  const [shouldRenderImage, setShouldRenderImage] = useState(true)
 
-  const getImageExtension = (urlSrc: Props['src']) => {
-    const fileExtension = urlSrc.replace(/^.*[\\\/]/, '')
-    return fileExtension.split('.').pop()
-  }
+  if (!shouldRenderImage) return null
 
-  const extension = getImageExtension(src)
-
-  if (extension !== 'jpg') {
-    imgUrl = src + '.jpg'
-  }
-
-  return <img src={imgUrl} alt={alt} />
+  return <img src={src} alt={alt} onError={() => setShouldRenderImage(false)} />
 }
 
 export default Image
