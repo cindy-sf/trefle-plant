@@ -21,7 +21,7 @@ const Layout:React.FC<Props> = ({ children, title = 'Trefle Plant' }) => (
         <span></span>
         <p
           className={styles.brandTitle}
-        onClick={() => Router.push('/')}
+          onClick={() => Router.push('/')}
         >
           Trefle Plant
         </p>
