@@ -6,8 +6,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  @media (min-width: $tiny-screen) {
+  min-height: calc(100vh - 14.5rem);
+  margin-bottom: 7rem;
+
+  @media (min-width: $small-screen) {
+    margin-bottom: initial;
     min-height: calc(100vh - 8rem);
   }
 }
@@ -16,6 +19,7 @@
   width: 100%;
   height: 15rem;
   background-color: $color-grey;
+
   
   @media (min-width: $tiny-screen) {
     height: 20rem;
