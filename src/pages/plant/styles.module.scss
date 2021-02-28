@@ -6,8 +6,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  @media (min-width: $tiny-screen) {
+  min-height: calc(100vh - 14.5rem);
+  margin-bottom: 7rem;
+
+  @media (min-width: $small-screen) {
+    margin-bottom: initial;
     min-height: calc(100vh - 8rem);
   }
 }
@@ -16,6 +19,7 @@
   width: 100%;
   height: 15rem;
   background-color: $color-grey;
+
   
   @media (min-width: $tiny-screen) {
     height: 20rem;
@@ -37,13 +41,11 @@
   }
 }
 
-.fondoWrapper {
-  position: relative;
-  min-height: 15rem;
+.imagesWrapper {
   width: 100%;
   display: flex;
-  margin-top: 2rem;
   flex-direction: column;
+  margin-top: 2rem;
 
   @media (min-width: $small-screen) {
     flex-direction: row;
@@ -51,7 +53,7 @@
 }
 
 .imgWrapper {
-  width: 85%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 
@@ -65,42 +67,51 @@
     &:not(:last-child) {
       margin-right: 3rem;
     }
-  
-    &:nth-child(3) {
-      margin-top: 3rem;
-    }
-  
-    &:nth-child(3) {
+
+    &:nth-of-type(even) {
       margin-top: 6rem;
     }
   }
 
   img {
+    transition: transform .288s cubic-bezier(0.64, 0.57, 0.67, 1.53);
     width: 100%;
+  }
+
+  &:hover {
+    img {
+      transition: transform .288s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+      cursor: pointer;
+      filter: grayscale(0);
+      transform: scale(1.02);
+    }
   }
 }
 
-
-.fondo {
-  visibility: visible;
-  opacity: 1;
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0.2s;
-  display: flex;
-  position: absolute;
-  z-index: -1;
+.infosWrapper {
   width: 100%;
-  border-left: 1px solid #909090;
-  opacity: 0.3;
-  height: 100%;
-  margin-top: 2rem;
+  display: flex;
+  align-items: center;
 
-  div {
-    visibility: visible;
-    opacity: 1;
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0.2s;
+  h2 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    margin: auto;
+    font-size: 2rem;
+  }
+}
+
+.img {
+  width: 100%;
+  margin-top: 3.5rem;
+
+  img {
     width: 100%;
-    border-right: 1px solid #cacaca;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: $small-screen) {
+    width: 25rem;
   }
 }
