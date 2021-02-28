@@ -3,11 +3,11 @@
 .illustration {
   width: 18rem;
   margin: 0 auto;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4.5rem;
 
   @media (min-width: $small-screen) {
     margin: 0;
-    margin-left: auto;
+    margin-right: auto;
     width: 23rem;
   }
 
@@ -28,10 +28,6 @@
     margin-top: 8rem;
 
     & > :first-child {
-      order: 1;
-    }
-    
-    & > :nth-child(2) {
       @media (min-width: $small-screen) {
         margin-right: 2rem;
       }
@@ -52,16 +48,4 @@
     flex-direction: column;
     justify-content: center;
   }
-}
-
-.br {
-  display: none;
-
-  @media (min-width: $small-screen) {
-    display: block;
-  }
-}
-
-.link {
-  text-decoration: none;
 }
