@@ -4,6 +4,18 @@ interface Links {
   genus: string
 }
 
+export interface Image {
+  id: number
+  image_url: string
+  copyright: string
+}
+
+
+interface MainSpecies {
+  id: number
+  images: { [key: string]: Image[] }
+}
+
 export interface Plant {
   id: number
   slug: string
@@ -21,6 +33,8 @@ export interface Plant {
   genus: string
   family: string
   links: Links
+  images: any
+  main_species: MainSpecies
 }
 
 export type Plants = Plant[]
