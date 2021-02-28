@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import type { Plant, Image } from '$src/types/plant'
+import type { Plant } from '$src/types/plant'
 
 import FallbackImage from '$src/assets/images/search/plant-placeholder.jpg'
 import Loader from '$src/components/Loader'
@@ -32,22 +32,22 @@ export const PlantInfo:React.FC = () => {
             images: {
               flower: [
                 {
-                  copyright: '',
+                  copyright: 'Taken Dec 15, 2017 by christiane Fazer (cc-by-sa)',
                   id: 1,
                   image_url: 'https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bGVhZnxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60',
                 },
                 {
-                  copyright: '',
+                  copyright: 'aken Sep 20, 2017 by Thomas Delhotal (cc-by-sa)',
                   id: 1,
                   image_url: 'https://images.unsplash.com/photo-1550147760-44c9966d6bc7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bGVhZnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
                 },
                 {
-                  copyright: '',
+                  copyright: 'aken Feb 16, 2013 by Tela Botanica − François BAHUAUD (cc-by-sa)',
                   id: 1,
                   image_url: 'https://images.unsplash.com/photo-1533037440921-f788628f8d0e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bGVhZnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
                 },
                 {
-                  copyright: '',
+                  copyright: 'Taken Sep 20, 2017 by Thomas Delhotal (cc-by-sa)',
                   id: 1,
                   image_url: 'https://images.unsplash.com/photo-1587411320692-d6a3504f38ca?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8bGVhZnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
                 },
@@ -102,7 +102,7 @@ export const PlantInfo:React.FC = () => {
             {plant.scientific_name}
           </Text>
         </div>
-        <div>
+        <div style={{ marginTop: '2rem' }}>
           <Text
             fontFamily="playfairDisplay"
             as="h3"
@@ -120,12 +120,10 @@ export const PlantInfo:React.FC = () => {
               <div data-sr-id="6"></div>
               <div data-sr-id="7"></div>
             </div>
-            {/* {Object.keys(plant.main_species.images['flower']).map((elem) => {
-              <p>{elem}</p>
-            })} */}
             {Object.entries(plant.main_species.images['flower']).map(([key, image]) => (
               <div className={styles.imgWrapper}>
-                <Img key={image.id} src={image.image_url} alt="" />
+                <Img src={image.image_url} alt={key} />
+                <Text italic size="x-small" mt="mtSmall" color="darkGrey">{image.copyright}</Text>
               </div>
             ))}
           </div>
