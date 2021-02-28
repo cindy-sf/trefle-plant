@@ -6,7 +6,20 @@ interface Props {
 }
 
 export const Image:React.FC<Props> = ({ src, alt }) => {
-  return <img src={src} alt={alt} />
+  let imgUrl = src
+
+  const getImageExtension = (urlSrc: Props['src']) => {
+    const fileExtension = urlSrc.replace(/^.*[\\\/]/, '')
+    return fileExtension.split('.').pop()
+  }
+
+  const extension = getImageExtension(src)
+
+  if (extension !== 'jpg') {
+    imgUrl = src + '.jpg'
+  }
+
+  return <img src={imgUrl} alt={alt} />
 }
 
 export default Image
