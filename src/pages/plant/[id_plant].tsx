@@ -74,7 +74,7 @@ export const PlantInfo:React.FC = () => {
   }
 
   return (
-    <Layout title={`Trefle plant | ${plant?.common_name}`}>
+    <Layout title={`Trefle plant | ${plant?.common_name || ''}`}>
       {renderLoader()}
       {renderError()}
       {renderPlantDetail()}
