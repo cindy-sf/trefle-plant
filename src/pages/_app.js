@@ -10,6 +10,7 @@ const MyApp = ({ Component, pageProps }) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"  rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap" rel="stylesheet" />
       </Head>
       <Component {...pageProps} />
     </>
