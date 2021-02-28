@@ -1,8 +1,6 @@
 @import '../../../global/scss/variables';
 
 .text {
-  font-family: 'Lato', sans-serif;
-
   &.italic {
     font-style: italic;
   }
@@ -78,9 +76,14 @@
       font-size: 1.2rem;
     }
   }
+
   &.smallImportant {
     @extend .small;
     font-weight: bold;
+  }
+
+  &.x-small {
+    font-size: 1rem;
   }
 
   &.center {
@@ -93,5 +96,13 @@
 
   &.mtSmall {
     margin-top: 0.8rem;
+  }
+
+  &.lato {
+    font-family: 'Lato', sans-serif;
+  }
+
+  &.playfairDisplay {
+    font-family: 'Playfair Display';
   }
 }

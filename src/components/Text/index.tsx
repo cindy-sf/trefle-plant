@@ -10,13 +10,24 @@ interface Props {
   color?: 'black' | 'white' | 'green' | 'darkGrey'
   size?: 'titleL' | 'titleM' | 'titleS' | 'large'|
          'largeImportant' | 'medium' | 'mediumImportant' | 
-         'small' | 'smallImportant'
+         'small' | 'x-small' | 'smallImportant'
   textAlign?: 'center' | 'left'
   mt?: 'mtSmall'
   mb?: 'mtSmall'
+  fontFamily?: 'playfairDisplay' | 'lato'
 }
 
-export const Text:FC<Props> = ({ children, as, italic, color, size, textAlign, mt, mb }) => {
+export const Text:FC<Props> = ({
+  children,
+  as,
+  italic,
+  color,
+  size,
+  textAlign,
+  mt,
+  mb,
+  fontFamily,
+}) => {
   const Tag = as as keyof JSX.IntrinsicElements
   const classes = [
     italic && styles.italic,
@@ -25,6 +36,7 @@ export const Text:FC<Props> = ({ children, as, italic, color, size, textAlign, m
     textAlign && styles[textAlign],
     mt && styles.mtSmall,
     mb && styles.mbSmall,
+    fontFamily && styles[fontFamily],
   ]
 
   return (
@@ -38,7 +50,8 @@ Text.defaultProps = {
   as: 'p',
   color: 'black',
   textAlign: 'left',
-  size: "medium",
+  size: 'medium',
+  fontFamily: 'lato',
 }
 
 export default Text
