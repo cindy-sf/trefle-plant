@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Router from "next/router";
+import Router from "next/router"
 
 import GirlWithPlant from '$src/assets/images/home/girl-with-plant.png'
 import Text from '../components/Text'
