@@ -10,7 +10,7 @@ interface Props {
 
 export const Input:React.FC<Props> = ({ value, onSubmit, onChange }) => {
   const handleKeyPress = (event: React.KeyboardEvent) =>{
-    if (value && event.key == 'Enter' ) onSubmit()
+    if (value && event.key == 'Enter' ) handleSubmit()
     if (!/[a-zA-Z\s]+/g.test(event.key)) event.preventDefault()
   }
 
