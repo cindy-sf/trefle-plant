@@ -92,6 +92,11 @@
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column-reverse;
+
+  @media (min-width: $small-screen) {
+    flex-direction: row;
+  }
 
   h2 {
     font-family: 'Montserrat';

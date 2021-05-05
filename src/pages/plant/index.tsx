@@ -50,7 +50,7 @@ export const PlantInfo:React.FC = () => {
         <div className={styles.imagesWrapper}>
           {plant.main_species && Object.entries(plant.main_species.images['flower']).map(([key, image]) => (
             <ParallaxProvider key={key}>
-              <Parallax y={[20, -20]} className={styles.imgWrapper}>
+              <Parallax y={[20, 0]} className={styles.imgWrapper}>
                 <Img src={image.image_url} alt={key} />
                 <Text italic size="x-small" mt="mtSmall" color="darkGrey">{image.copyright}</Text>
               </Parallax>
