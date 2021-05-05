@@ -5,8 +5,7 @@ import Layout from '$src/components/Layout'
 import Text from '$src/components/Text'
 import Img from '$src/components/Image'
 
-import FallbackImage from '$src/assets/images/search/plant-placeholder.jpg'
-import InfosImage from '$src/assets/images/detail/infos.png'
+import InfosImage from '$src/assets/images/infos.png'
 
 import { plant } from '../../stubs'
 
@@ -18,7 +17,7 @@ export const PlantInfo:React.FC = () => {
       <div className={styles.plantWrapper}>
         <div className={styles.image}>
           <Img
-            src={plant.image_url || FallbackImage}
+            src={plant.image_url}
             alt={plant.common_name}
           />
         </div>

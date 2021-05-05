@@ -1,6 +1,6 @@
 import Router from "next/router"
 
-import Image from '$src/assets/images/home/design.png'
+import Image from '$src/assets/images/goodBye.png'
 import Layout from '../components/Layout'
 
 import styles from './styles.module.scss'
